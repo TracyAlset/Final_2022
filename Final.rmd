@@ -77,6 +77,13 @@ Looking at the first table, it looks like 2.63% out of those who took the placeb
 
 ### Inferential Results.
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+Looking at the p-value for fisher's exact test for count data ( which is very low and it equals 2.645e-11), this tells us that there is an actual statistical difference between taking the placebo or the vaccine for men, and this proves that the vaccine is effective for males. 
 
 
 ### Efficacy of vaccine for Males.
