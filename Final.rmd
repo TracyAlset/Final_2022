@@ -35,6 +35,22 @@ A new  preventative vaccine (covid91) is under test in clinical trials. Given th
 
 ## Males
 
+### Descriptive Results.
+
+### Graphical Results
+
+
+
+
+### Numerical Results.
+
+
+
+### Inferential Results.
+
+
+
+### Efficacy of vaccine for Males.
 
 ## Females
 
