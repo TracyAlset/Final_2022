@@ -58,11 +58,18 @@ basicCC <- ggplot(dd2,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
-
+Based on the count graph it is looks like the vaccine is working for males because there were less infections in the vaccine group than the placebo group (from the covid 19 bars).
+And based on the percentage graph, the percentage of the males who took the placebo and had covid is around 66% which is higher than those who took the vaccine which is around 30%. So far, the vaccine seems to be working for males.
 
 
 
 ## Numerical Results.
+
+```{r}
+table1 <- xtabs(~treatment + infected, data=Males)
+rowPerc(table1)
+colPerc(table1)
+```
 
 
 
