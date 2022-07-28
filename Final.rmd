@@ -90,7 +90,7 @@ Looking at the p-value for fisher's exact test for count data ( which is very lo
 ### Efficacy of vaccine for Males.
 
 ```{r}
-EfficacyMales<- ((2.092161/(1+2.092161)*100))
+EfficacyMales<- ((malefisher$estimate/(malefisher$estimate+1))*100)
 maleFisherLow<- malefisher$conf.int[1]
 maleFisherHigh<- malefisher$conf.int[2]
 malefisherlow<- ((maleFisherLow/(maleFisherLow+1))*100)
