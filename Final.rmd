@@ -18,6 +18,7 @@ FinalDat <-read.csv(file="final_Data.csv",header=TRUE)
 FinalData <- FinalDat  %>% select(-one_of("X"))
 FinalData <- FinalData %>%
 mutate(across(where(is.character), as.factor))
+options(digits=1)
 ```
 
 ```{r}
@@ -71,7 +72,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-Looking at the first table, it looks like 2.63% out of those who took the placebo had covid, and 1.28% of those who took the vaccine got covid. This information doesn't really show the efficacy of  the vaccine. But looking at the second table, The majority of those who had covid are the ones who took the placebo( 67.78%) while it's less infections with the vaccines group ( 32.22%). So far the vaccine seems to be effective.
+Looking at the first table, it looks like 3% out of those who took the placebo had covid, and 1% of those who took the vaccine got covid. This information doesn't really show the efficacy of  the vaccine. But looking at the second table, The majority of those who had covid are the ones who took the placebo( 68%) while it's less infections with the vaccines group ( 32%). So far the vaccine seems to be effective.
 
 
 
@@ -80,13 +81,25 @@ Looking at the first table, it looks like 2.63% out of those who took the placeb
 ```{r}
 chisq.test(table1)
 chisqtestGC(table1)
-fisher.test(table1)
+malefisher<-fisher.test(table1)
 ```
 
 Looking at the p-value for fisher's exact test for count data ( which is very low and it equals 2.645e-11), this tells us that there is an actual statistical difference between taking the placebo or the vaccine for men, and this proves that the vaccine is effective for males. 
 
 
 ### Efficacy of vaccine for Males.
+
+```{r}
+EfficacyMales<- ((2.092161/(1+2.092161)*100))
+maleFisherLow<- malefisher$conf.int[1]
+maleFisherHigh<- malefisher$conf.int[2]
+malefisherlow<- ((maleFisherLow/(maleFisherLow+1))*100)
+malefisherhigh<- ((maleFisherHigh/(maleFisherHigh+1))*100)
+```
+
+The efficacy of the vaccine among males is `r (EfficacyMales)`%
+
+The 95% confidence interval is from `r (malefisherlow)`% to `r (malefisherhigh)`%
 
 ## Females
 
