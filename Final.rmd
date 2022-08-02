@@ -124,6 +124,12 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 
 ## Numerical Results.
 
+```{r}
+table2 <- xtabs(~treatment + infected, data=Females)
+rowPerc(table2)
+colPerc(table2)
+```
+
 
 
 ### Inferential Results.
