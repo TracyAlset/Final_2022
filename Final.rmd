@@ -144,6 +144,13 @@ femalefisher<-fisher.test(table2)
 
 ### Efficacy of vaccine for Females.
 
+```{r}
+EfficacyFemales<- ((femalefisher$estimate/(femalefisher$estimate+1))*100)
+femaleFisherLow<- femalefisher$conf.int[1]
+femaleFisherHigh<- femalefisher$conf.int[2]
+femalefisherlow<- ((femaleFisherLow/(femaleFisherLow+1))*100)
+femalefisherhigh<- ((femaleFisherHigh/(femaleFisherHigh+1))*100)
+```
 
 
 ## LGBTQ
