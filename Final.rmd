@@ -91,7 +91,7 @@ malefisher<-fisher.test(table1)
 malefisher
 ```
 
-The odd ratio is `r malefisher$estimate`, and this tells us that the odds for the males taking the placebo to have covid is 2 to 1 to those who take the vaccine.
+The odd ratio is `r malefisher$estimate`, and this tells us that the odds for the males taking the placebo to have covid is 2.1 to 1 to those who take the vaccine.
 
 ### Efficacy of vaccine for Males.
 
@@ -157,6 +157,7 @@ femalefisher<-fisher.test(table2)
 femalefisher
 ```
 
+The odd ratio is `r femalefisher$estimate`, and this tells us that the odds for the females taking the placebo to have covid is 1.4 to 1 to those who take the vaccine.
 
 ### Efficacy of vaccine for Females.
 
