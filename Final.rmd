@@ -84,7 +84,7 @@ chisqtestGC(table1)
 malefisher<-fisher.test(table1)
 ```
 
-Looking at the p-value for fisher's exact test for count data ( which is very low and it equals 2.645e-11), this tells us that there is an actual statistical difference between taking the placebo or the vaccine for men, and this proves that the vaccine is effective for males. 
+Looking at the p-value ( which is very low and it equals 2.645e-11 and it's less than 0.05), we reject  the Null hypothesis and this tells us that there is an actual statistical difference between taking the placebo or the vaccine for men, and this proves that the vaccine is effective for males. 
 
 
 ### Efficacy of vaccine for Males.
@@ -134,7 +134,7 @@ rowPerc(table2)
 colPerc(table2)
 ```
 
-Looking at the first table , it doesn't look like the data provided helps us to find anything about the effectiveness of the vacccine for women, but based on the information provided by the second table which gives us the percentage of those who took the vaccine or the placebo from the group that had covid, our observations tell us that 59% of those who had covid took the placebo , while 41% of them took the vaccine and this percentage is lower than the one for the placebo, this demonstrates so far that the vaccine is working for females.  
+Looking at the first table , it doesn't look like the data provided helps us to find anything about the effectiveness of the vaccine for women, but based on the information provided by the second table which gives us the percentage of those who took the vaccine or the placebo from the group that had covid, our observations tell us that 59% of those who had covid took the placebo , while 41% of them took the vaccine and this percentage is lower than the one for the placebo, this demonstrates so far that the vaccine is working for females.  
 
 ### Inferential Results.
 
@@ -143,6 +143,8 @@ chisq.test(table2)
 chisqtestGC(table2)
 femalefisher<-fisher.test(table2)
 ```
+
+Looking at the p-value ( which is very low and it equals  0.001 and it's less than 0.05),we reject the Null hypothesis and this tells us that there is an actual statistical difference between taking the placebo or the vaccine for females, and this proves that the vaccine is effective for females.
 
 
 
@@ -155,6 +157,7 @@ femaleFisherHigh<- femalefisher$conf.int[2]
 femalefisherlow<- ((femaleFisherLow/(femaleFisherLow+1))*100)
 femalefisherhigh<- ((femaleFisherHigh/(femaleFisherHigh+1))*100)
 ```
+
 
 
 ## LGBTQ
