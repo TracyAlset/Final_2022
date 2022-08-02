@@ -86,6 +86,12 @@ malefisher<-fisher.test(table1)
 
 Looking at the p-value ( which is very low and it equals 2.645e-11 and it's less than 0.05), we reject  the Null hypothesis and this tells us that there is an actual statistical difference between taking the placebo or the vaccine for men, and this proves that the vaccine is effective for males. 
 
+```{r}
+malefisher<-fisher.test(table1)
+malefisher
+```
+
+The odd ratio is `r malefisher$estimate`, and this tells us that the odds for the males taking the placebo to have covid is 2 to 1 to those who take the vaccine.
 
 ### Efficacy of vaccine for Males.
 
@@ -146,6 +152,10 @@ femalefisher<-fisher.test(table2)
 
 Looking at the p-value ( which is very low and it equals  0.001 and it's less than 0.05),we reject the Null hypothesis and this tells us that there is an actual statistical difference between taking the placebo or the vaccine for females, and this proves that the vaccine is effective for females.
 
+```{r}
+femalefisher<-fisher.test(table2)
+femalefisher
+```
 
 
 ### Efficacy of vaccine for Females.
