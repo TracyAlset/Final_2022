@@ -158,6 +158,9 @@ femalefisherlow<- ((femaleFisherLow/(femaleFisherLow+1))*100)
 femalefisherhigh<- ((femaleFisherHigh/(femaleFisherHigh+1))*100)
 ```
 
+The efficacy of the vaccine among females is `r (EfficacyFemales)`%
+
+The 95% confidence interval is from `r (femalefisherlow)`% to `r (femalefisherhigh)`%
 
 
 ## LGBTQ
