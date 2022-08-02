@@ -134,7 +134,7 @@ rowPerc(table2)
 colPerc(table2)
 ```
 
-
+Looking at the first table , it doesn't look like the data provided helps us to find anything about the effectiveness of the vacccine for women, but based on the information provided by the second table which gives us the percentage of those who took the vaccine or the placebo from the group that had covid, our observations tell us that 59% of those who had covid took the placebo , while 41% of them took the vaccine and this percentage is lower than the one for the placebo, this demonstrates so far that the vaccine is working for females.  
 
 ### Inferential Results.
 
