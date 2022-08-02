@@ -134,6 +134,12 @@ colPerc(table2)
 
 ### Inferential Results.
 
+```{r}
+chisq.test(table2)
+chisqtestGC(table2)
+femalefisher<-fisher.test(table2)
+```
+
 
 
 ### Efficacy of vaccine for Females.
