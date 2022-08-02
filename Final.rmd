@@ -122,6 +122,10 @@ basicCC + geom_bar(stat="identity", position = "dodge")
 ```
 
 
+Based on the count graph, looking at the covid part of the graph, it looks like there were less infections in the female group that took the vaccine than the female group that took the placebo.
+As we move on to the percentage graph, we can see that the percentage of infection in the placebo group which is around 60% is higher than the percentage of infection in the vaccine group which is around 40%. This means that based on our graphical results , so far it looks like the vaccine is effective for females.
+
+
 ## Numerical Results.
 
 ```{r}
