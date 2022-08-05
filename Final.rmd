@@ -255,6 +255,14 @@ By the info that we obtain from the count graph it looks like the number of the 
 
 ### Numerical Results.
 
+```{r}
+table4 <- xtabs(~treatment + infected, data=DrugUsers)
+rowPerc(table4)
+colPerc(table4)
+```
+
+As we analyze the first table, we can see that the percentage of those that had covid from the placebo group is 0.6% while the percentage of those who had covid from the vaccine is higher and it's 3.3%. Now this data doesn't help us that much  really, the data that can demonstrate some sort of a proof is from the second table, where we can see that the percentage of those who took the vaccine from the group that had covid is 85% and it's higher than the percentage of those who took the placebo from the covid group which is 15%. And this data very much matches the data that we obtained from the percentage graph, which leads to the fact that we still can see that the vaccine isn't really effective for drug users.
+
 
 
 ### Inferential Results.
