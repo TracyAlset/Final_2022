@@ -227,6 +227,18 @@ The odd ratio is `r LGBTQfisher$estimate`, and this tells us that the odds for L
 
 ### Efficacy of vaccine for Gays.
 
+```{r}
+EfficacyLGBTQ<- ((LGBTQfisher$estimate/(LGBTQfisher$estimate+1))*100)
+LGBTQFisherLow<- LGBTQfisher$conf.int[1]
+LGBTQFisherHigh<- LGBTQfisher$conf.int[2]
+LGBTQfisherlow<- ((LGBTQFisherLow/(LGBTQFisherLow+1))*100)
+LGBTQfisherhigh<- ((LGBTQFisherHigh/(LGBTQFisherHigh+1))*100)
+```
+
+The efficacy of the vaccine among LGBTQ people is `r (EfficacyLGBTQ)`%
+
+The 95% confidence interval is from `r (LGBTQfisherlow)`% to `r (LGBTQfisherhigh)`%
+
 
 ## Drug users.
 
@@ -286,6 +298,21 @@ The odd ratio is `r DrugUsersfisher$estimate`, and this tells us that the odds f
 
 ### Efficacy of vaccine for Drug users..
 
+```{r}
+EfficacyDrugUsers<- ((DrugUsersfisher$estimate/(DrugUsersfisher$estimate+1))*100)
+DrugUsersFisherLow<- DrugUsersfisher$conf.int[1]
+DrugUsersFisherHigh<- DrugUsersfisher$conf.int[2]
+DrugUsersfisherlow<- ((DrugUsersFisherLow/(DrugUsersFisherLow+1))*100)
+DrugUsersfisherhigh<- ((DrugUsersFisherHigh/(DrugUsersFisherHigh+1))*100)
+```
+
+The efficacy of the vaccine among females is `r (EfficacyDrugUsers)`%
+
+The 95% confidence interval is from `r (DrugUsersfisherlow)`% to `r (DrugUsersfisherhigh)`% 
+
+## Discussion and Conclusion.
+
+In this project we tried to find the efficiency of a certain vaccine in four different cases
 
 
 
