@@ -250,9 +250,7 @@ basicCC3<- ggplot(dd4,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC3 + geom_bar(stat="identity", position = "dodge")
 ```
 
-
-
-
+By the info that we obtain from the count graph it looks like the number of the drug users who took the vaccine and had covid is higher than the number of drug users who took the placebo and had covid. And as we move on to analyze the percentage graph, we can see the same thing  where the percentage of the drug users who took the vaccine and had covid is around 85% which is higher than the percentage of the drug users who took the placebo and had covid. So far this demonstrates that the vaccine isn't effective for drug users.
 
 
 ### Numerical Results.
