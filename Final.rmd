@@ -195,7 +195,7 @@ basicCC2 <- ggplot(dd4,aes(x=infected,y=prcnt*100,fill=treatment))
 basicCC2 + geom_bar(stat="identity", position = "dodge")
 ```
 
-
+Looking  at the count graph we can see that the number of those infected in the group that took the vaccine is higher than the number of people infected in the group that took the placebo. And the percentage graph shows the same thing, where we can see that the percentage of infection in the vaccine group which is around 85% is very much higher than the percentage of infection in the placebo group which is around 15%. This tells us so far that the vaccine isn't effective for the LGBTQ community.
 
 
 ## Numerical Results.
