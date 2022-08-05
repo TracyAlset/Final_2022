@@ -38,10 +38,7 @@ A new  preventative vaccine (covid91) is under test in clinical trials. Given th
 
 ### Descriptive Results.
 
-## Graphical Results
-
-
-
+### Graphical Results
 
 
 ```{r}
@@ -64,7 +61,7 @@ And based on the percentage graph, the percentage of the males who took the plac
 
 
 
-## Numerical Results.
+### Numerical Results.
 
 ```{r}
 table1 <- xtabs(~treatment + infected, data=Males)
@@ -110,7 +107,7 @@ The 95% confidence interval is from `r (malefisherlow)`% to `r (malefisherhigh)`
 ## Females
 ### Descriptive Results.
 
-## Graphical Results
+### Graphical Results
 
 ```{r}
 dd3 <- Females %>% group_by(infected, treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
@@ -132,7 +129,7 @@ Based on the count graph, looking at the covid part of the graph, it looks like 
 As we move on to the percentage graph, we can see that the percentage of infection in the placebo group which is around 60% is higher than the percentage of infection in the vaccine group which is around 40%. This means that based on our graphical results , so far it looks like the vaccine is effective for females.
 
 
-## Numerical Results.
+### Numerical Results.
 
 ```{r}
 table2 <- xtabs(~treatment + infected, data=Females)
@@ -178,7 +175,7 @@ The 95% confidence interval is from `r (femalefisherlow)`% to `r (femalefisherhi
 
 ### Descriptive Results.
 
-## Graphical Results
+### Graphical Results
 
 ```{r}
 dd4 <- LQBTQ %>% group_by(infected, treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
@@ -198,7 +195,13 @@ basicCC2 + geom_bar(stat="identity", position = "dodge")
 Looking  at the count graph we can see that the number of those infected in the group that took the vaccine is higher than the number of people infected in the group that took the placebo. And the percentage graph shows the same thing, where we can see that the percentage of infection in the vaccine group which is around 85% is very much higher than the percentage of infection in the placebo group which is around 15%. This tells us so far that the vaccine isn't effective for the LGBTQ community.
 
 
-## Numerical Results.
+### Numerical Results.
+
+```{r}
+table3 <- xtabs(~treatment + infected, data=LQBTQ)
+rowPerc(table3)
+colPerc(table3)
+```
 
 
 
@@ -213,12 +216,12 @@ Looking  at the count graph we can see that the number of those infected in the 
 
 ### Descriptive Results.
 
-## Graphical Results
+### Graphical Results
 
 
 
 
-## Numerical Results.
+### Numerical Results.
 
 
 
