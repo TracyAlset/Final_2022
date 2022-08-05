@@ -18,7 +18,6 @@ FinalDat <-read.csv(file="final_Data.csv",header=TRUE)
 FinalData <- FinalDat  %>% select(-one_of("X"))
 FinalData <- FinalData %>%
 mutate(across(where(is.character), as.factor))
-options(digits=1)
 ```
 
 ```{r}
@@ -88,7 +87,7 @@ malefisher<-fisher.test(table1)
 malefisher
 ```
 
-The odd ratio is `r malefisher$estimate`, and this tells us that the odds for the males taking the placebo to have covid is 2.1 to 1 to those who take the vaccine.
+The odd ratio is `r malefisher$estimate`, and this tells us that the odds for the males taking the placebo to have covid is 2.1 to 1 to those who take the vaccine,meaning there are 2.1 males that took the placebo and tested positive for covid for every 1 male that took the vaccine and had covid. and this proves the effictiveness of the vaccine for males.
 
 ### Efficacy of vaccine for Males.
 
@@ -154,7 +153,7 @@ femalefisher<-fisher.test(table2)
 femalefisher
 ```
 
-The odd ratio is `r femalefisher$estimate`, and this tells us that the odds for the females taking the placebo to have covid is 1.4 to 1 to those who take the vaccine.
+The odd ratio is `r femalefisher$estimate`, and this tells us that the odds for the females taking the placebo to have covid is 1.4 to 1 to those who take the vaccine,meaning there are 1.4 females that took the placebo and tested positive for covid for every 1 female that took the vaccine and had covid. And this proves the effectiveness of the vaccine for females.
 
 ### Efficacy of vaccine for Females.
 
@@ -214,22 +213,22 @@ chisqtestGC(table3)
 LGBTQfisher<-fisher.test(table3)
 ```
 
-Looking at the p-value ( which is very low and it equals  0.001 and it's less than 0.05),we reject the Null hypothesis and this tells us that there is an actual statistical difference between taking the placebo or the vaccine for females, and this proves that the vaccine is effective for females.
+Looking at the p-value ( which is very low and it equals  0 ),we reject the Null hypothesis( the results of the Null hypothesis are not likely to happen) and this tells us that there is an actual statistical difference between taking the placebo or the vaccine for LGBTQ people, and this proves that the vaccine isn't effective for LGBTQ( the difference does not favor the vaccine in this case).
 
 
 
 ```{r}
-LGBTQfisher<-fisher.test(table2)
+LGBTQfisher<-fisher.test(table3)
 LGBTQfisher
 ```
 
-
+The odd ratio is `r LGBTQfisher$estimate`, and this tells us that the odds for LGBTQ people taking the placebo to have covid is 0.1 to 1 to those who take the vaccine.meaning there are 0.1 LGBTQ person that took the placebo and tested positive for covid for every 1 LGBTQ person that took the vaccine and had covid. And this proves that the vaccine isn't effective for LGBTQ.
 
 
 ### Efficacy of vaccine for Gays.
 
 
-## Druggies
+## Drug users.
 
 ### Descriptive Results.
 
@@ -267,6 +266,22 @@ As we analyze the first table, we can see that the percentage of those that had 
 
 ### Inferential Results.
 
+
+```{r}
+chisq.test(table4)
+chisqtestGC(table4)
+DrugUsersfisher<-fisher.test(table4)
+```
+
+Looking at the p-value ( which is very low and it equals  0 ),we reject the Null hypothesis( the results of the Null hypothesis are not likely to happen) and this tells us that there is an actual statistical difference between taking the placebo or the vaccine for drug users, and this proves that the vaccine isn't effective for drug users( the difference does not favor the vaccine in this case).
+
+
+```{r}
+DrugUsersfisher<-fisher.test(table4)
+DrugUsersfisher
+```
+
+The odd ratio is `r DrugUsersfisher$estimate`, and this tells us that the odds for drug users taking the placebo to have covid is 0.2 to 1 to those who take the vaccine, meaning there are 0.2 drug users that took the placebo and tested positive for covid for every 1 drug user that took the vaccine and had covid. And this proves that the vaccine isn't effective for drug users.
 
 
 ### Efficacy of vaccine for Drug users..
