@@ -208,6 +208,22 @@ As we analyze the first table, we can see that the percentage of those that had 
 
 ### Inferential Results.
 
+```{r}
+chisq.test(table3)
+chisqtestGC(table3)
+LGBTQfisher<-fisher.test(table3)
+```
+
+
+
+
+
+```{r}
+LGBTQfisher<-fisher.test(table2)
+LGBTQfisher
+```
+
+
 
 
 ### Efficacy of vaccine for Gays.
