@@ -214,7 +214,7 @@ chisqtestGC(table3)
 LGBTQfisher<-fisher.test(table3)
 ```
 
-
+Looking at the p-value ( which is very low and it equals  0.001 and it's less than 0.05),we reject the Null hypothesis and this tells us that there is an actual statistical difference between taking the placebo or the vaccine for females, and this proves that the vaccine is effective for females.
 
 
 
@@ -234,6 +234,23 @@ LGBTQfisher
 ### Descriptive Results.
 
 ### Graphical Results
+
+```{r}
+dd5 <- DrugUsers %>% group_by(infected, treatment) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
+
+
+# the group_by followed by summarize(count=n())
+
+basicC3 <- ggplot(dd4,aes(x=infected,y=count,fill=treatment))
+basicC3 + geom_bar(stat="identity",position="dodge")
+
+#Now for percentage plot
+
+basicCC3<- ggplot(dd4,aes(x=infected,y=prcnt*100,fill=treatment)) 
+basicCC3 + geom_bar(stat="identity", position = "dodge")
+```
+
+
 
 
 
