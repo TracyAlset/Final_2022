@@ -87,7 +87,7 @@ malefisher<-fisher.test(table1)
 malefisher
 ```
 
-The odd ratio is `r malefisher$estimate`, and this tells us that the odds for the males taking the placebo to have covid is 2.1 to 1 to those who take the vaccine,meaning there are 2.1 males that took the placebo and tested positive for covid for every 1 male that took the vaccine and had covid. and this proves the effictiveness of the vaccine for males.
+The odd ratio is `r malefisher$estimate`, and this tells us that the odds for the males taking the placebo to have covid is 2.1 to 1 to those who take the vaccine,meaning there are 2.1 males that took the placebo and tested positive for covid for every 1 male that took the vaccine and had covid. and this proves the effectiveness of the vaccine for males.
 
 ### Efficacy of vaccine for Males.
 
@@ -312,7 +312,15 @@ The 95% confidence interval is from `r (DrugUsersfisherlow)`% to `r (DrugUsersfi
 
 ## Discussion and Conclusion.
 
-In this project we tried to find the efficiency of a certain vaccine in four different cases
+In this project we tried to find how effective a certain vaccine for covid is in four different cases: For males, females, LGBTQ community and drug users.
+In each case, we started our analysis by obtaining graphical results. In the cases of males and females , the counts and percentages of infection in the vaccine group were less than the placebo group, whereas for LGBTQ and drug users it was the opposite, more counts and higher percentages of infections in the vaccine group than the placebo group.Moving on, we obtained numerical data that gave the percentages of those who took the vaccine and those who took the placebo out of the infected group and the data was compatible with the graphical data in all cases, meaning more infections in the placebo groups for males and females and more infections in the vaccine group for LGBTQ and drug users. The next step was running inferential tests( chi-square and fisher tests) where we found the p value and the odds ratio for each case and the results we got approves with what  we got from the graphical and numerical data. Then we found the efficacy of the vaccine in all of these groups and a 95% confidence interval. In the end, we concluded that the vaccine is effective for males and females but not effective for LGBTQ community and drug users.
+
+
+
+
+
+
+
 
 
 
